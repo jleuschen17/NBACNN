@@ -20,10 +20,11 @@ def teamFinder(year):
             acronym = link[7] + link[8] + link[9]
             ids[teams[x]] = []
             ids[teams[x]].append(acronym)
-            x += 1
+            x+=1
         except:
             pass
     for x in range(len(teams)):
         ids[teams[x]].append(team_id)
-        team_id += 1
+        team_id+=1
     return teams, ids
+
