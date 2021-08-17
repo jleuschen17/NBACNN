@@ -1,4 +1,8 @@
 import urlConvertor
+import requests
+from bs4 import BeautifulSoup
+import pandas as pd
+
 def statScraper(name, year, playerindex, team_id):
     index = int(playerindex)
     for x in range(2):

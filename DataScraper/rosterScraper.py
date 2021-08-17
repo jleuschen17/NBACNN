@@ -1,3 +1,7 @@
+import requests
+from bs4 import BeautifulSoup
+import unidecode
+import re
 def rosterScraper(TeamID, year, id_number):
     url = f"https://www.basketball-reference.com/teams/{TeamID}/{year}.html"
     result = requests.get(url)

@@ -1,3 +1,6 @@
+import requests
+from bs4 import BeautifulSoup
+
 def teamFinder(year):
     team_id = 101
     url = f"https://www.basketball-reference.com/leagues/NBA_{year}.html"

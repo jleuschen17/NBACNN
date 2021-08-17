@@ -1,5 +1,5 @@
-import teamFinder
-import rosterScraper
+from teamFinder import teamFinder
+from rosterScraper import rosterScraper
 def teamRoster(team, year):
     roster = []
     id_number = 1001
