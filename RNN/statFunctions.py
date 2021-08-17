@@ -11,6 +11,7 @@ def csv_to_df(csv):
 
 def clean_stats(df):
     df['GmID'] = 0
+    df['WL'] = 0
     for x in range(len(df)):
         #Date
         date = df.loc[x, 'Date']
@@ -71,6 +72,13 @@ def clean_stats(df):
         date = int(df.loc[x, 'Date'])
         tmID = df.loc[x, 'TmID']
         df.at[x, 'GmID'] = date + tmID
+
+        #WL
+        wl = df.loc[x, 'GS']
+        if wl > 0:
+            df.at[x, 'WL'] = 1
+        else:
+            df.at[x, 'WL'] = 0
     return df
 
 
