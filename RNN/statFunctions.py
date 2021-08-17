@@ -113,15 +113,6 @@ def get_game_numbers(games):
         numbers.append(game)
     return numbers
 
-csv = r"C:\Users\jleus\OneDrive\Documents\CSVS\Hawks2016v2.csv"
-df = csv_to_df(csv)
-df = clean_stats(df)
-df = standerdize_stats(df)
-df = rid_nans(df)
-arr = to_numpy(df)
-arr = combine_team_stats(arr)
-games = get_game_numbers(arr)
-
-
-#%%
-print(games)
+def game_df(df, gameid):
+    df = df[df['GmID'] == gameid]
+    return df
