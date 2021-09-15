@@ -13,6 +13,7 @@ def teamFinder(year):
     trs = table.find_all('tr')
     x = 0
     for tr in trs[1:]:
+        #print(tr.prettify())
         try:
             td = tr.find('td', {'data-stat': 'team', 'class': 'left'})
             a_tag = td.find('a')

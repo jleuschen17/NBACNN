@@ -6,10 +6,11 @@ def teamScraper(team, year):
         try:
             if x == 0:
                 player = roster[x]
-                df = statScraper(player, year, '01', team_ids[team][0])
+                df = statScraper(player, year, '01', team, team_ids)
             else:
                 player = roster[x]
-                df = df.append(statScraper(player, year, '01', team_ids[team][0]))
+                df2 = statScraper(player, year, '01', team, team_ids)
+                df = df.append(df2)
         except:
             pass
     return df
